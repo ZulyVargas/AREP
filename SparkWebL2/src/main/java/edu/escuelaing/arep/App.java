@@ -24,11 +24,13 @@ public class App
 
         //Celsius a Fahrenheit
         post("/convert/toFahrenheit/", (req, res)->{
+            res.status(200);
             res.type("application/json");
             return new Gson().toJson(TemperatureCalculator.convertCelsiusToFahrenheit(new Celsius(Double.valueOf(req.body()))));
         });
         //Fahrenheit a Celsius
         post("/convert/toCelsius/", (req, res)->{
+            res.status(200);
             res.type("application/json");
             return new Gson().toJson(TemperatureCalculator.convertFahrenheitToCelsius(new Fahrenheit(Double.valueOf(req.body()))));
         });
