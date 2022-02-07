@@ -15,24 +15,25 @@ public class App
 {
     public static void main(String[] args) {
         port(getPort());
+        staticFiles.location("/view");
         get("/hello", (req, res) -> "Hello Heroku");
-        path("/",()->{
-            //Celsius a Fahrenheit
-
-            get("/toFahrenheit/:value", (req, res)->{
-                res.redirect("index.html");
-                res.type("application/json");
-                return new Gson().toJson(TemperatureCalculator.convertCelsiusToFahrenheit(new Celsius(Double.valueOf(req.params(":value")))));
-            });
-            //Fahrenheit a Celsius
-            get("/toCelsius/:value", (req, res)->{
-                res.redirect("index.html");
-                res.type("application/json");
-                return new Gson().toJson(TemperatureCalculator.convertFahrenheitToCelsius(new Fahrenheit(Double.valueOf(req.params(":value")))));
-            });
-
+        
+        get("/",(request,response)-> {
+                    response.redirect("index.html");
+            return null;
         });
-    }
+        //Celsius a Fahrenheit
+        post("/toFahrenheit/:value", (req, res)->{
+            res.type("application/json");
+            return new Gson().toJson(TemperatureCalculator.convertCelsiusToFahrenheit(new Celsius(Double.valueOf(req.params(":value")))));
+        });
+        //Fahrenheit a Celsius
+        post("/toCelsius/:value", (req, res)->{
+            res.type("application/json");
+            return new Gson().toJson(TemperatureCalculator.convertFahrenheitToCelsius(new Fahrenheit(Double.valueOf(req.params(":value")))));
+        });
+
+}
 
     static int getPort() {
         if (System.getenv("PORT") != null) {
