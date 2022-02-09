@@ -17,28 +17,28 @@ public class App
         port(getPort());
         staticFiles.location("/view");
 
-        get("/convert",(request,response)-> {
-
+        get("/inicio",(request,response)-> {
             response.redirect("/index.html");
             return null;
         });
 
-        //Celsius a Fahrenheit
-        post("/convert/toFahrenheit/", (req, res)->{
-            res.status(200);
-            res.header("Access-Control-Allow-Origin", "*");
-            res.type("application/json");
-            return new Gson().toJson(TemperatureCalculator.convertCelsiusToFahrenheit(new Celsius(Double.valueOf(req.body()))));
-        });
-        //Fahrenheit a Celsius
-        post("/convert/toCelsius/", (req, res)->{
-            res.status(200);
-            res.header("Access-Control-Allow-Origin", "*");
-            res.type("application/json");
-            return new Gson().toJson(TemperatureCalculator.convertFahrenheitToCelsius(new Fahrenheit(Double.valueOf(req.body()))));
-        });
-
-    }
+            //Celsius a Fahrenheit
+        path("/convert", ()-> {
+                get("/toFahrenheit/:value", (req, res) -> {
+                    res.status(200);
+                    res.header("Access-Control-Allow-Origin", "*");
+                    res.type("application/json");
+                    return new Gson().toJson(TemperatureCalculator.convertCelsiusToFahrenheit(new Celsius(Double.valueOf(req.params(":value")))));
+                });
+                //Fahrenheit a Celsius
+                get("/toCelsius/:value", (req, res) -> {
+                    res.status(200);
+                    res.header("Access-Control-Allow-Origin", "*");
+                    res.type("application/json");
+                    return new Gson().toJson(TemperatureCalculator.convertFahrenheitToCelsius(new Fahrenheit(Double.valueOf(req.params(":value")))));
+                });
+            });
+        }
     static int getPort() {
         if (System.getenv("PORT") != null) {
             return Integer.parseInt(System.getenv("PORT"));
