@@ -19,10 +19,9 @@
 
             <li>Empecemos explicando cómo podriamos conectarnos desde JavaScript:
                 Esta API se encuentra desplegada en la siguiente dirección: <A href = "https://calm-earth-36734.herokuapp.com">https://calm-earth-36734.herokuapp.com</A></li>
-            Para conectar desde un archivo .JS basta con utilizar la ruta correspondiente según la conversión que se desee
-            hacer y realizar la petición POST. En esta caso se utilizara la libreria axios para poder realizar la petición http
-            (de igual forma se puede usar XMLHttpRequest(), fetch, etc).
-
+                Para conectar desde un archivo .JS basta con utilizar la ruta correspondiente según la conversión que se desee
+                hacer y realizar la petición POST. En esta caso se utilizara la libreria axios para poder realizar la petición http
+                (de igual forma se puede usar XMLHttpRequest(), fetch, etc).
         </ul>
 
         <ul>
@@ -37,7 +36,9 @@
 
         <center><img src="img/fahrenheitToC.png">
             <p>....De esta forma la conversión que se necesitaba quedará guardada en la variable que recibe la respuesta para ser usada como se desee.</p>
+
         </center>
+
     </section>
     <hr width=80%>
     <section>
@@ -50,6 +51,11 @@
             En la parte posterior de la página mostrada encontrada los espacios para realizar las conversiones. Ingrese el valor o valor deseado en los espacios indicados y oprima el botón para obtener los resultados.
             <center><img src="img/localhostResult.png"></center>
             De esta manera se pueden realizar las conversiones empleando accediendo a la API de manera local.
+            <p>Para emplear la API sin interfaz gráfica podemos simplemente agregar los valores a convertir según la ruta de la siguiente manera:</p>
+            <p> http://localhost:4567/convert/toCelsius/"valor"</p>
+            <center><img src="img/ejemfahrenheitToC.png"></center>
+            <p> http://localhost:4567/convert/toFahrenheit/"valor"</p>
+            <center><img src="img/ejemplotoF.png"></center>
         </ul>
     </section>
     <hr width=80%>
@@ -59,6 +65,9 @@
             <center><img src="img/javaCmd.png"></center>
             De esta forma se ejecuta el método main de la clase principal de la API. Así podrá usar de manera local el API desde el navegador como se explicó en el paso anterior.
             <!--Mostrar lo de consumir la api desde un programa-->
+            Para usar la API en un programa JAVA basta con hacer una petición GET a la dirección de la API de la siguiente
+            manera:
+                <center><img src="img/apiEnJava.png"></center>
         </ul>
 
     </section>
