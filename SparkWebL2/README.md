@@ -32,6 +32,7 @@ En su navegador ingrese a la siguiente dirección para visualizar y utilizar la 
 ![](src/main/resources/view/img/localhost.png)
 
 Para hacer las conversiones correspondientes sin usar interfaz visual :
+
 (A Fahrenheit) http://localhost:4567/convert/toFahrenheit/"valor"
 
 ![](src/main/resources/view/img/ejemploToF.png)
@@ -44,7 +45,7 @@ Para hacer las conversiones correspondientes sin usar interfaz visual :
 
     mvn test
 
-###Pruebas concurrentes :
+### Pruebas concurrentes :
 
 Para la ejecución de pruebas concurrentes las cuales permiten demostrar que la API soporta hasta más de 10 peticiones al tiempo se creo una nueva clase ConcurrentAppTest,
 en esta se ejecutan 11 hilos donde la mitad de ellos realizan peticiones para conversión de grados Celsius y la otra mitad para
