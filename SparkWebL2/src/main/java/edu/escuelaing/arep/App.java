@@ -18,6 +18,7 @@ public class App
         staticFiles.location("/view");
 
         get("/convert",(request,response)-> {
+
             response.redirect("/index.html");
             return null;
         });
@@ -25,12 +26,14 @@ public class App
         //Celsius a Fahrenheit
         post("/convert/toFahrenheit/", (req, res)->{
             res.status(200);
+            res.header("Access-Control-Allow-Origin", "*");
             res.type("application/json");
             return new Gson().toJson(TemperatureCalculator.convertCelsiusToFahrenheit(new Celsius(Double.valueOf(req.body()))));
         });
         //Fahrenheit a Celsius
         post("/convert/toCelsius/", (req, res)->{
             res.status(200);
+            res.header("Access-Control-Allow-Origin", "*");
             res.type("application/json");
             return new Gson().toJson(TemperatureCalculator.convertFahrenheitToCelsius(new Fahrenheit(Double.valueOf(req.body()))));
         });

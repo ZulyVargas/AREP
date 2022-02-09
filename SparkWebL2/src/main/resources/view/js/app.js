@@ -2,8 +2,8 @@ var buttonCelsius = document.getElementById('button-celsius');
 buttonCelsius.addEventListener('click', function () {
     var cels = document.getElementById('celsius').value;
     console.log(cels);
-	//var url1 = 'http://localhost:4567/convert/toFahrenheit/';
-	var url1 = 'https://calm-earth-36734.herokuapp.com/convert/toFahrenheit/'
+	var url1 = 'http://localhost:4567/convert/toFahrenheit/';
+	//var url1 = 'https://calm-earth-36734.herokuapp.com/convert/toFahrenheit/'
     axios.post(url1, cels)
         .then(res => {
             var obj = JSON.parse(res.data);
