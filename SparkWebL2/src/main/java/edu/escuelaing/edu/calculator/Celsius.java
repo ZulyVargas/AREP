@@ -7,6 +7,10 @@ public class Celsius {
 
     private Double value = Double.valueOf(0);
 
+    /**
+     * Represents a value of Celsius degrees
+     * @param value - Double value with the degrees.
+     */
     public Celsius(Double value){
         this.value = value;
     }

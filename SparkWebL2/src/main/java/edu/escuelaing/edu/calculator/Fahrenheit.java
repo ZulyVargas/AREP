@@ -4,7 +4,10 @@ public class Fahrenheit {
 
     private Double value = Double.valueOf(0);
 
-
+    /**
+     * Represents a value of Fahrenheit degrees.
+     * @param value - Double value with the degrees.
+     */
     public Fahrenheit(Double value){
         this.value = value;
     }
