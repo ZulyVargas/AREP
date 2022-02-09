@@ -42,7 +42,7 @@ En su navegador ingrese a la siguiente dirección para visualizar y utilizar la 
 
 [![ProjectDesign](https://www.herokucdn.com/deploy/button.png)](https://calm-earth-36734.herokuapp.com)
 
-##Documentación
+## Documentación
 Para generar la documentación se debe ejecutar:
 
     mvn javadoc:javadoc
