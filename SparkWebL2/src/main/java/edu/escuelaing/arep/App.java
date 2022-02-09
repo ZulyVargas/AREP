@@ -11,7 +11,7 @@ import com.google.gson.Gson;
  * @author Zuly Valentina Vargas Ramirez
  */
 
-public class App 
+public class App
 {
     public static void main(String[] args) {
         port(getPort());
