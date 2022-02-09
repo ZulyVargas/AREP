@@ -30,14 +30,24 @@ Para ejecutar desde la ubicación del proyecto
 En su navegador ingrese a la siguiente dirección para visualizar y utilizar la calculadora : 
 
     http://localhost:4567
-
 ![](src/main/resources/view/img/localhost.png)
+
+Para hacer las conversiones correspondientes sin usar interfaz visual :
+(A Fahrenheit) http://localhost:4567/convert/toFahrenheit/"valor"
+
+![](src/main/resources/view/img/ejemploToF.png)
+
+(A Celsius) http://localhost:4567/convert/toCelsius/"valor"
+
+![](src/main/resources/view/img/ejemfahrenheitToC.png.png)
 
 ## Ejecución de  pruebas
 
     mvn test
 
+###Pruebas concurrentes :
 
+    
 ## Despliegue
 
 [![ProjectDesign](https://www.herokucdn.com/deploy/button.png)](https://calm-earth-36734.herokuapp.com)

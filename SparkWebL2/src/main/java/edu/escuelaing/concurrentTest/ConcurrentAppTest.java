@@ -17,7 +17,7 @@ public class ConcurrentAppTest extends Thread{
     private static final int NUM_OF_REQUEST = 11;
     //private static final String forCelsius = "http://localhost:4567/convert/toFahrenheit/";
     //private static final String forFahrenheit = "http://localhost:4567/convert/toCelsius/";
-    private static final String forCelsius = "https://calm-earth-36734.herokuapp.com/convert/toFahrenheit/";
+    private static final String forCelsius = "https://calm-earth-36734.herokuapp.com/convert/toCelsius/";
     private static final String forFahrenheit = "https://calm-earth-36734.herokuapp.com/convert/toFahrenheit/";
     private static String urlPlus= "/";
     private static double degree = 32;
@@ -28,8 +28,7 @@ public class ConcurrentAppTest extends Thread{
         rand = new Random();
         for (int i=0; i < NUM_OF_REQUEST -5 ;i++){
             Thread t = new ConcurrentAppTest();
-
-            urlPlus = forCelsius;
+            urlPlus = forCelsius + degree;
             degree = rand.nextInt(300)  / 100.0;
             t.start();
         }
