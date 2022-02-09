@@ -24,7 +24,6 @@ Para ejecutar desde la ubicación del proyecto
 
     mvn clean package exec:java -D "exec.mainClass"="edu.escuelaing.arep.App"
 
-
 ![](src/main/resources/view/img/javaCmd.png)
 
 En su navegador ingrese a la siguiente dirección para visualizar y utilizar la calculadora : 
@@ -39,7 +38,7 @@ Para hacer las conversiones correspondientes sin usar interfaz visual :
 
 (A Celsius) http://localhost:4567/convert/toCelsius/"valor"
 
-![](src/main/resources/view/img/ejemfahrenheitToC.png.png)
+![](src/main/resources/view/img/ejemfahrenheitToC.png)
 
 ## Ejecución de  pruebas
 
@@ -48,10 +47,24 @@ Para hacer las conversiones correspondientes sin usar interfaz visual :
 ###Pruebas concurrentes :
 
 Para la ejecución de pruebas concurrentes las cuales permiten demostrar que la API soporta hasta más de 10 peticiones al tiempo se creo una nueva clase ConcurrentAppTest,
-en esta se ejecutan 10 hilos donde la mitad de ellos realizan peticiones para conversión de grados Celsius y la otra mitad para
-conversión de grados Fahrenheit. A continuación se puede observar los códigos de respuesta y el número de peticiones realizadas.
+en esta se ejecutan 11 hilos donde la mitad de ellos realizan peticiones para conversión de grados Celsius y la otra mitad para
+conversión de grados Fahrenheit. 
+
+Como ejecutar :
+
+    mvn clean package exec:java -D "exec.mainClass"="edu.escuelaing.concurrentTest.ConcurrentAppTest"  
+
+![](src/main/resources/view/img/program1.png)
 
 
+![](src/main/resources/view/img/program2.png)
+
+
+![](src/main/resources/view/img/program3.png)
+
+A continuación se puede observar las url de las peticiones, los códigos de respuesta y el número de peticiones realizadas.
+
+![](src/main/resources/view/img/pruebasOk.png)
 
 ## Despliegue
 
@@ -61,6 +74,7 @@ conversión de grados Fahrenheit. A continuación se puede observar los códigos
 Para generar la documentación se debe ejecutar:
 
     mvn javadoc:javadoc
+
 Esta quedará en la carpeta target/site/apidocs :
 
 ![](src/main/resources/view/img/documents.png)
@@ -77,7 +91,7 @@ O diríjase a la siguiente dirección:
 
 ## Autores
 
-* **Zuly Valentina Vargas Ramírez** 
+**Zuly Valentina Vargas Ramírez** 
 
 
 ## Licencia

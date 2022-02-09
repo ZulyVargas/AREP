@@ -54,7 +54,6 @@ public class ConcurrentAppTest extends Thread{
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 
     /**
