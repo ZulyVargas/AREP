@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"edu.escuelaing.arep","l":"App"},{"p":"edu.escuelaing.edu.calculator","l":"Celsius"},{"p":"edu.escuelaing.edu.calculator","l":"Fahrenheit"},{"p":"edu.escuelaing.edu.calculator","l":"TemperatureCalculator"}]
