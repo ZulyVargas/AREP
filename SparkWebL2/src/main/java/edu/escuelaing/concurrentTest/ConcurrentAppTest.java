@@ -23,7 +23,11 @@ public class ConcurrentAppTest extends Thread{
     private static double degree = 32;
     private static Random rand ;
 
-    public static void main(String[] args) throws IOException {
+    /**
+     * Creates the thread for the petitions.
+     * @param args
+     */
+    public static void main(String[] args) {
         countPetition = new AtomicInteger(0);
         rand = new Random();
         for (int i=0; i < NUM_OF_REQUEST -5 ;i++){
@@ -53,6 +57,11 @@ public class ConcurrentAppTest extends Thread{
 
     }
 
+    /**
+     * Makes the petition with the correspondent degrees and type.
+     * @param id - Thread's id.
+     * @throws IOException
+     */
     private void makePetition(long id) throws IOException {
         URL obj = new URL(urlPlus);
         System.out.println("URL " + obj );

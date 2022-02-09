@@ -47,7 +47,12 @@ Para hacer las conversiones correspondientes sin usar interfaz visual :
 
 ###Pruebas concurrentes :
 
-    
+Para la ejecución de pruebas concurrentes las cuales permiten demostrar que la API soporta hasta más de 10 peticiones al tiempo se creo una nueva clase ConcurrentAppTest,
+en esta se ejecutan 10 hilos donde la mitad de ellos realizan peticiones para conversión de grados Celsius y la otra mitad para
+conversión de grados Fahrenheit. A continuación se puede observar los códigos de respuesta y el número de peticiones realizadas.
+
+
+
 ## Despliegue
 
 [![ProjectDesign](https://www.herokucdn.com/deploy/button.png)](https://calm-earth-36734.herokuapp.com)
