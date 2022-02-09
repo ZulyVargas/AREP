@@ -15,10 +15,10 @@ public class ConcurrentAppTest extends Thread{
     //private static final String GET_URL = "http://localhost:4567/convert/toFahrenheit/40";
     private static AtomicInteger countPetition = null;
     private static final int NUM_OF_REQUEST = 11;
-    private static final String forCelsius = "http://localhost:4567/convert/toFahrenheit/20";
-    private static final String forFahrenheit = "http://localhost:4567/convert/toCelsius/";
-    //private static final String forCelsius = "https://calm-earth-36734.herokuapp.com/convert/toFahrenheit/";
-    //private static final String forFahrenheit = "https://calm-earth-36734.herokuapp.com/convert/toFahrenheit/";
+    //private static final String forCelsius = "http://localhost:4567/convert/toFahrenheit/";
+    //private static final String forFahrenheit = "http://localhost:4567/convert/toCelsius/";
+    private static final String forCelsius = "https://calm-earth-36734.herokuapp.com/convert/toFahrenheit/";
+    private static final String forFahrenheit = "https://calm-earth-36734.herokuapp.com/convert/toFahrenheit/";
     private static String urlPlus= "/";
     private static double degree = 32;
     private static Random rand ;
