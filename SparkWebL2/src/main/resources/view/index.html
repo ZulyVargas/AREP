@@ -9,6 +9,7 @@
 <font color="#1C2833" face="Verdana, Open Sans">
     <center>
         <h1 style="color:#072227">CALCULADORA CONVERSORA DE TEMPERATURAS</h1>
+        <hr width=80%>
     </center>
     <section>
         <ul>
@@ -38,38 +39,55 @@
             <p>....De esta forma la conversión que se necesitaba quedará guardada en la variable que recibe la respuesta para ser usada como se desee.</p>
         </center>
     </section>
-
+    <hr width=80%>
     <section>
         <ul>
             <li >Para usar esta API desde el navegador de manera local, basta con descargar el repositorio donde se encuentran los archivos
-                fuente de esta API. Luego de obtener el repositorio se debe acceder a la dirección : http://localhost:4567/.
+                fuente de esta API. Luego de obtener el repositorio se debe acceder a la dirección desde su navegador de preferencia: <i>http://localhost:4567</i>.
                 <b style="color:#0F2E62"><br></br>Repositorio:</b> <A href =https://github.com/ZulyVargas/AREP_labSpark.git >Ir a github</A></li>
 
-            <!-- Agregar imagen con el localhost-->
-
+            <center><img src="img/localhost.png"></center>
+            En la parte posterior de la página mostrada encontrada los espacios para realizar las conversiones. Ingrese el valor o valor deseado en los espacios indicados y oprima el botón para obtener los resultados.
+            <center><img src="img/localhostResult.png"></center>
             De esta manera se pueden realizar las conversiones empleando accediendo a la API de manera local.
         </ul>
     </section>
+    <hr width=80%>
+    <section>
+        <ul>
+            <li >Finalmente para usar esta API desde Java se debe ejecutar el siguiente comando desde la consola y en la dirección donde se encuentren los archivos fuente:
+            <center><img src="img/javaCmd.png"></center>
+            De esta forma se ejecuta el método main de la clase principal de la API. Así podrá usar de manera local el API desde el navegador como se explicó en el paso anterior.
+            <!--Mostrar lo de consumir la api desde un programa-->
+        </ul>
 
+    </section>
+    <hr width=80%>
     <center>
         <h1 style="color:#072227">PRUEBE LA CALCULADORA EN LÍNEA: </h1>
     </center>
 
     <section>
         <h2 style="color :#395B64" >GRADOS CELSIUS A FAHRENHEIT</h2>
-        <input type="text" class="form-control" placeholder="Celsius" id="celsius" style="margin-bottom: 10px">
-        <input id="button-celsius" type="submit" value="calculate" class="btns" >
-        <h4  id="fahrenheit"></h4>
+        <input type="text" class="form-control" placeholder="Celsius" id="celsiusValue" size="15" >
+        <br></br>
+        <input id="button-celsius" type="submit" value="CONVERTIR"  >
+        <p  id="fahrenheitResult" style="color:#106860"><b></b></p>
     </section>
 
     <section>
         <h2 style="color :#395B64" >GRADOS FAHRENHEIT A CELSIUS</h2>
-        <input type="text" class="form-control" placeholder="Fahrenheit" id="fahrenheitd" style="margin-bottom: 10px">
-        <input id="button-fahrenheit" type="submit" value="calculate" class="btns" >
-        <h4  id="celsiusd"></h4>
+        <input type="text" class="form-control" placeholder="Fahrenheit" id="fahrenheitValue" size="15" >
+        <br></br>
+        <input id="button-fahrenheit" type="submit" value="CONVERTIR"  >
+        <p  id="celsiusResult" style="color:#106860"><b></b></p>
+        <br></br>
     </section>
+    <hr width=80%>
+    <br></br>
 </font>
 </body>
+
 
 <script type="text/javascript" src="js/app.js" ></script>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>

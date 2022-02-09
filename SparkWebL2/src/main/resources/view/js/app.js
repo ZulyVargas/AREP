@@ -1,13 +1,12 @@
 var buttonCelsius = document.getElementById('button-celsius');
 buttonCelsius.addEventListener('click', function () {
-    var cels = document.getElementById('celsius').value;
-    console.log(cels);
+    var celsiusValue = document.getElementById('celsiusValue').value;
 	//var url1 = 'http://localhost:4567/convert/toFahrenheit/';
 	var url1 = 'https://calm-earth-36734.herokuapp.com/convert/toFahrenheit/'
-    axios.post(url1, cels)
+    axios.post(url1, celsiusValue)
         .then(res => {
             var obj = JSON.parse(res.data);
-            $("#fahrenheit").text("Fahrenheit : " + obj);
+            $("#fahrenheitResult").text("Fahrenheit : " + obj + "°F");
             console.log(obj);
         })
         .catch(function (error) {
@@ -17,14 +16,13 @@ buttonCelsius.addEventListener('click', function () {
 
 var buttonFahrenheit = document.getElementById('button-fahrenheit');
 buttonFahrenheit.addEventListener('click', function () {
-    var fahr = document.getElementById('fahrenheitd').value;
-    console.log(fahr);
-	//var url2 = 'http://localhost:4567/convert/toCelsius/';
+    var fahrenheitValue = document.getElementById('fahrenheitValue').value;
+    //var url2 = 'http://localhost:4567/convert/toCelsius/';
 	var url2 = 'https://calm-earth-36734.herokuapp.com/convert/toCelsius/'
-    axios.post(url2, fahr)
+    axios.post(url2, fahrenheitValue)
         .then(res => {
             var obj2 = JSON.parse(res.data);
-            $("#celsiusd").text("Celsius: " + obj2);
+            $("#celsiusResult").text("Celsius: " + obj2 + "°C");
             console.log(obj2);
         })
         .catch(function (error) {
