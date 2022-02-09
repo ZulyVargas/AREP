@@ -43,7 +43,11 @@ Para hacer las conversiones correspondientes sin usar interfaz visual :
 
 ## Ejecución de  pruebas
 
+En estas pruebas unitarias se muestra que las clases que realizan las conversiones correspondientes funcionan correctamente.
+
     mvn test
+
+![](src/main/resources/view/img/pruebasU.png)
 
 ### Pruebas concurrentes :
 
